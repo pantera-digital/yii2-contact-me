@@ -6,7 +6,7 @@
  * Time: 11:31 PM
  */
 
-namespace pantera\contactMe\widgets\contactMe;
+namespace pantera\contactMe\widgets\contactMe\assets;
 
 use yii\web\AssetBundle;
 
@@ -17,7 +17,7 @@ class ContactMeAsset extends AssetBundle
         'js/script.js',
     ];
     public $depends = [
-        'pantera\contactMe\LaddaAsset',
-        'pantera\contactMe\GrowlAsset',
+        'pantera\contactMe\widgets\contactMe\assets\LaddaAsset',
+        'pantera\contactMe\widgets\contactMe\assets\GrowlAsset',
     ];
 }

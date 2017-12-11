@@ -9,6 +9,7 @@
 namespace pantera\contactMe\widgets\contactMe;
 
 use pantera\contactMe\models\ContactMe;
+use pantera\contactMe\widgets\contactMe\assets\ContactMeAsset;
 use yii\base\Widget;
 use yii\helpers\Url;
 
