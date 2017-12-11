@@ -50,7 +50,7 @@ use pantera\contactMe\widgets\contactMe\ContactMeWidget;
 <?= pantera\contactMe\widgets\contactMe\ContactMeWidget::widget() ?>
 ```
 
-##### Настройка
+## Настройка
 у виджета есть только один параметр
 ```
 action
