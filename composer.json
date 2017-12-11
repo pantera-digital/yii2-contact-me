@@ -1,0 +1,19 @@
+{
+  "name": "pantera-digital/yii2-contact-me",
+  "type": "yii2-extension",
+  "authors": [
+    {
+      "name": "singletonn",
+      "email": "sopranowest@gmail.com"
+    }
+  ],
+  "require": {
+    "bower-asset/ladda": "*",
+    "bower-asset/growl": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "pantera\\contactMe\\": ""
+    }
+  }
+}
