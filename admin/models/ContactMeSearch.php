@@ -1,7 +1,8 @@
 <?php
 
-namespace pantera\contactMe\models;
+namespace pantera\contactMe\admin\models;
 
+use pantera\contactMe\models\ContactMe;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
 
