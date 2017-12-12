@@ -4,7 +4,7 @@ namespace pantera\contactMe\admin\controllers;
 
 use pantera\contactMe\admin\Module;
 use pantera\contactMe\models\ContactMe;
-use pantera\contactMe\models\ContactMeSearch;
+use pantera\contactMe\admin\models\ContactMeSearch;
 use Yii;
 use yii\filters\AccessControl;
 use yii\filters\VerbFilter;

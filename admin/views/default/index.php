@@ -1,6 +1,6 @@
 <?php
 
-use pantera\contactMe\models\ContactMeSearch;
+use pantera\contactMe\admin\models\ContactMeSearch;
 use yii\grid\GridView;
 use yii\helpers\Html;
 use yii\widgets\Pjax;
