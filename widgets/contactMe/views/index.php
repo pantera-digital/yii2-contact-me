@@ -51,7 +51,7 @@ use yii\widgets\ActiveForm;
                 'placeholder' => '+7 (ХХХ) ХХХ-ХХ-ХХ',
             ]) ?>
 
-            <?= $form->field($model, 'email')->textInput([
+            <?= $form->field($model, 'email')->input('email', [
                 'placeholder' => 'example@example.ru',
             ]) ?>
 

@@ -28,7 +28,7 @@ $(window).on('load', function () {
     });
 
     //Очистка всех полей после закрытия модалки
-    $('#modal').on('hidden.bs.modal', function (e) {
+    $('#modal-callback').on('hidden.bs.modal', function (e) {
         $(this).find('input, textarea').val('');
     });
 });
