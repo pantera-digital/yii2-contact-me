@@ -28,6 +28,8 @@ class m171205_092761_create_contact_me_table extends Migration
      */
     public function down()
     {
-        $this->dropTable('{{%contact_me}}');
+        if ($this->db->schema->getTableSchema('{{%contact_me}}', true) !== null) {
+            $this->dropTable('{{%contact_me}}');
+        }
     }
 }

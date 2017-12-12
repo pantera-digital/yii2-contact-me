@@ -14,7 +14,7 @@ use yii\helpers\Url;
 
 class ContactMeWidget extends Widget
 {
-    /* @var string Акшион в форме подписки */
+    /* @var string Акшион в форме */
     public $action;
 
     public function run()
