@@ -26,7 +26,7 @@ class ContactMeWidget extends Widget
     public $modalTitle = 'Обратный звонок';
 
     /* @var string Краткий текст перед формой */
-    public $modalPrompt = 'Оставьте Ваши контактные данные, и наш менеджер свяжется с Вами!';
+    public $modalPrompt = 'Оставьте Ваши контактные данные и наш менеджер свяжется с Вами!';
 
     /* @var boolean Использовать Ladda */
     public $useLadda = true;
