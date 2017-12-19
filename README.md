@@ -3,11 +3,11 @@
 ## Установка
 Предпочтительно через composer:
 ```
-composer require pantera-digital/yii2-contact-me "@dev"
+composer require pantera-digital/yii2-contact-me "dev-kid"
 ```
 Или добавьте в composer.json
 ```
-"pantera-digital/yii2-contact-me": "@dev"
+"pantera-digital/yii2-contact-me": "dev-kid"
 ```
 
 ## Backend
