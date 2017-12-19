@@ -6,7 +6,7 @@
  * Time: 11:31 PM
  */
 
-namespace pantera\contactMe\widgets\contactMe\assets;
+namespace pantera\contactMe\widgets\contactMe;
 
 use yii\web\AssetBundle;
 
