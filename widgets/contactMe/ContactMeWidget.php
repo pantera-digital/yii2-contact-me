@@ -81,7 +81,7 @@ class ContactMeWidget extends Widget
         $afterSubmit .='alert(result.message);';
 
         //Обработка отправки заявки на обратный звонок
-        $script =  '$("#call-me-form").submit(function () {
+        $script =  '$("#contact-me-form").submit(function () {
                         var self = $(this);
                         ' . $beforeSubmit . '
                         $.ajax({

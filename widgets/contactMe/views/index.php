@@ -37,7 +37,7 @@ use yii\helpers\Url;
 ])?>
 
 <?php $form = ActiveForm::begin([
-    'id' => 'call-me-form',
+    'id' => 'contact-me-form',
     'action' => Url::to([$this->context->action]),
     'enableClientScript' => false,
     'options' => [
