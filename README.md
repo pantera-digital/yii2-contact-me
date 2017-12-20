@@ -51,13 +51,23 @@ use pantera\contactMe\widgets\contactMe\ContactMeWidget;
 ```
 
 ## Настройка
-у виджета есть только один параметр
+Параметры виджета:
 ```
-action
-```
-отвечает за action формы
+/* @var string Экшн в форме */
+public $action = '/contact-me/default/index';
 
-дефолтное значение
-```
-Url::to(['/contact-me/default/index'])
+/* @var string Лейбл на кнопке вызова модалки и самой отправки */
+public $btnLabel = 'Перезвоните мне';
+
+/* @var string Заголовок модального окна */
+public $modalTitle = 'Обратный звонок';
+
+/* @var string Краткий текст перед формой */
+public $modalPrompt = 'Оставьте Ваши контактные данные и наш менеджер свяжется с Вами!';
+
+/* @var boolean Использовать Ladda */
+public $useLadda = true;
+
+/* @var boolean Использовать Growl */
+public $useGrowl = true;
 ```
