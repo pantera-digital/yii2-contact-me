@@ -15,6 +15,8 @@ use yii\db\ActiveRecord;
  */
 class ContactMe extends ActiveRecord
 {
+    const EVENT_AFTER_PROCESS = 'eventAfterProcess';
+
     /**
      * @inheritdoc
      */

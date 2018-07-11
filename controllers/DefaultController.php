@@ -47,6 +47,7 @@ class DefaultController extends Controller
                 'message' => current($model->getFirstErrors()),
             ];
         }
+        $model->trigger(ContactMe::EVENT_AFTER_PROCESS);
         return $this->asJson($result);
     }
 }
