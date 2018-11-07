@@ -2,6 +2,7 @@
 
 namespace pantera\contactMe\models;
 
+use Yii;
 use yii\db\ActiveRecord;
 
 /**
@@ -12,6 +13,7 @@ use yii\db\ActiveRecord;
  * @property string $phone
  * @property string $email
  * @property string $created_at
+ * @property string $referrer
  */
 class ContactMe extends ActiveRecord
 {
@@ -25,6 +27,12 @@ class ContactMe extends ActiveRecord
         return '{{%contact_me}}';
     }
 
+    public function beforeSave($insert)
+    {
+        $this->referrer = Yii::$app->request->referrer;
+        return parent::beforeSave($insert);
+    }
+
     /**
      * @inheritdoc
      */
@@ -34,6 +42,7 @@ class ContactMe extends ActiveRecord
             [['name', 'phone', 'email'], 'required'],
             [['created_at'], 'safe'],
             [['name', 'phone', 'email'], 'string', 'max' => 255],
+            [['referrer'], 'string'],
             [['email'], 'email'],
         ];
     }
@@ -49,6 +58,7 @@ class ContactMe extends ActiveRecord
             'phone' => 'Телефон',
             'email' => 'E-mail',
             'created_at' => 'Дата создания',
+            'referrer' => 'Referrer',
         ];
     }
 }
