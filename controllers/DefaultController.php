@@ -11,6 +11,7 @@ namespace pantera\contactMe\controllers;
 use pantera\contactMe\models\ContactMe;
 use pantera\contactMe\Module;
 use Yii;
+use yii\captcha\CaptchaAction;
 use yii\filters\VerbFilter;
 use yii\web\Controller;
 
@@ -31,6 +32,16 @@ class DefaultController extends Controller
         ];
     }
 
+    public function actions()
+    {
+        return [
+            'captcha' => [
+                'class' => CaptchaAction::class,
+                'fixedVerifyCode' => YII_ENV_TEST ? 'testme' : null,
+            ]
+        ];
+    }
+
     public function actionIndex()
     {
         $model = new ContactMe();
@@ -40,6 +51,7 @@ class DefaultController extends Controller
                 'style' => 'notice',
                 'message' => $this->module->successMessage,
             ];
+            $model->trigger(ContactMe::EVENT_AFTER_PROCESS);
         } else {
             $result = [
                 'status' => 'error',
@@ -47,7 +59,6 @@ class DefaultController extends Controller
                 'message' => current($model->getFirstErrors()),
             ];
         }
-        $model->trigger(ContactMe::EVENT_AFTER_PROCESS);
         return $this->asJson($result);
     }
 }

@@ -7,6 +7,7 @@
  */
 
 use pantera\contactMe\models\ContactMe;
+use yii\captcha\Captcha;
 use yii\helpers\Html;
 use yii\web\View;
 use yii\widgets\ActiveForm;
@@ -53,6 +54,10 @@ use yii\widgets\ActiveForm;
 
             <?= $form->field($model, 'email')->input('email', [
                 'placeholder' => 'example@example.ru',
+            ]) ?>
+
+            <?= $form->field($model, 'verifyCode')->widget(Captcha::class, [
+                'captchaAction' => ['/contact-me/default/captcha'],
             ]) ?>
 
             <div class="form-group form-group-actions">

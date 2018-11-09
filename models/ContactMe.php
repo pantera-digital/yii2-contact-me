@@ -17,6 +17,8 @@ use yii\db\ActiveRecord;
  */
 class ContactMe extends ActiveRecord
 {
+    public $verifyCode;
+
     const EVENT_AFTER_PROCESS = 'eventAfterProcess';
 
     /**
@@ -44,6 +46,7 @@ class ContactMe extends ActiveRecord
             [['name', 'phone', 'email'], 'string', 'max' => 255],
             [['referrer'], 'string'],
             [['email'], 'email'],
+            [['verifyCode'], 'captcha'],
         ];
     }
 
@@ -59,6 +62,7 @@ class ContactMe extends ActiveRecord
             'email' => 'E-mail',
             'created_at' => 'Дата создания',
             'referrer' => 'Referrer',
+            'verifyCode' => 'Код подтверждения',
         ];
     }
 }
